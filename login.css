@@ -1,0 +1,43 @@
+*{
+    background-color: #555;
+}
+.container_1{
+width: 100%;
+margin-top: 50px;
+}
+.p1, .p2, .p3{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+input[type=text]
+{
+    margin: 0 10%;
+    text-decoration: none;
+			border-bottom: solid #000;
+			border-top: solid #555 ;
+			border-right:  solid #555;
+			border-left:  solid #555;
+			color: #fff;	
+			width: 80%;
+}
+.login_button, .forgot_button, .cancel, .sign_in{
+    border:0;
+    color: #f8f8ff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.login_button a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+.forgot_button{
+    color: red;
+}
+.buttons_for_login{
+    width: 100%;
+    font-size: 20px;
+    text-align: center  ;
+}
