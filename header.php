@@ -68,11 +68,11 @@ function closeNav() {
 <div id="mySidenav" class="sidenav">
 
  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
- <a href="">VIEW USER</a>
- <a href="index.php">VIEW MAIN PAGE</a>
-  <a href="index3.php">VIEW RECORD</a>
+ <a href="index.php"> MAIN PAGE</a>
+ <a href="userdetail.php"> USERS DETAIL</a>
+  <a href="index3.php">INFO RECORD</a>
   <a href="e_mail1.php"> PERSONAL EMAIL</a>
-  <a href="#"> EMAIL TO ALL</a>
+  <a href="emailall.php"> EMAIL TO ALL</a>
   <a href="#">VIEW EMAIL</a>
   <a href="feedbacktable.php">VIEW FEEDBACK </a>
    <a href="logoutadminpanel.php">LOGOUT</a>
@@ -81,7 +81,10 @@ function closeNav() {
 <div style="display:flex; width:100%;  background-color:#transparent; border-bottom:2px solid #C0C0C0;color:#fff; ">
 <h1 style="width:4%; margin-left:1%;font-size:30px;cursor:pointer ; margin:25px 0px 0px 20px" onclick="openNav()">&#9776; </h1>
 <h1 style="width:95% ; text-align:center; background-color:transparent; font-size:4vw; margin:0px; ">HELPERPK.COM</h1>
+<p style="color:#000;">logout</p>
 </div>
+
+
     
 </body>
 </html>

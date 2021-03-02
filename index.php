@@ -1,4 +1,6 @@
-
+<?php
+include 'index2.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,9 +66,23 @@
 
         
         <br>
-        <div class="marquee">
-            <marquee class=marquee1 behavior="" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" >News-1 (Dated:15-06-2019)  PIAICNext Phase Admission in Islamabad And Faisalabad" . More Details    (News-2 Dated:15-05-2019)  Saylani Welfare Announced "Donation Application" . More Details    (News-3 Dated:07-05-2019)  Alhamdulillah Saylani Organized 200+ Locations For Iftar And Sehri In This Holy Month . More Details    (News-4 Dated:08-03-2019)  Saylani Welfare Distributing Ration & Clothes to affected people of Balochistan. More Details    (News-5 Dated:25-02-2019)  PIAIC Entrance Exam Merit Ranking List Announced. More Details   (News-6 Dated:23-02-2019)  President of Pakistan (Dr. Arif Alvi) Visited Saylani Welfare International Trust HeadOffice Karachi. More Details    (News-7 Dated:19-02-2019)  Dr Jamil Ahmed (Additional Inspector General of Police) & Atiqmir Visit Saylani Welfare International Trust, Saylani Mass I.T. Training. More Details   </marquee>
+        <?Php
+        $sel="select marquee1 from marquee ";
+        $selque=mysqli_query($con,$sel);
+        $num=mysqli_num_rows($selque);
+        while($result=mysqli_fetch_array($selque)){
+            ?>
+                    <div class="marquee">
+            <marquee class=marquee1 behavior="" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" ><?php  echo $result['marquee1'];?> </marquee>
         </div >
+            <?php
+        }
+        
+        ?>
+       
+        
+
+
         <div    class="theme">
             <div class="subtheme">
             <h1 class="theme0" style="font-family: 'Playfair Display', serif;">TOGETHER WE CAN MAKE A BETTER TOMORROW</h1>
@@ -221,7 +237,7 @@
         </div > <br>
         <?php
 
-include 'index2.php';
+
 if(isset($_POST['submit'])){
 $name=$_POST['name'];
 $contact=$_POST['contact'];

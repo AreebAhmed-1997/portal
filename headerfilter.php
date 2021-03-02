@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +98,7 @@
         <a href="accident.php">ACCIDENT</a>
         <a href="police.php">POLICE STATION</a>
         <a href="other.php">OTHERS</a>
+        <a href="filterlogout.php" id="logout" >LOGOUT</a>
        
 
         </div>
@@ -103,4 +109,13 @@
         </div>
     
 </body>
+<?php
+if(!isset($_SESSION['users'])){
+    ?>
+    <script>
+    document.getElementById('logout').style.display="none";
+    </script>
+    <?php
+}
+?>
 </html>

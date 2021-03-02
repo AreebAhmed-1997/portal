@@ -1,4 +1,12 @@
 <?php
+session_start();
+if(!isset($_SESSION['users'])){
+
+header('location:login.php');
+
+}
+
+
 include 'headerbasic.php';
 include 'index2.php';
 

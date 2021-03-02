@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,6 +89,7 @@
         
         <a href="signin.php">SIGN-IN</a>
         <a href="login.php">LOG-IN</a>
+        <a id="logout"href="filterlogout.php" >LOGOUT</a>
         
        
 
@@ -99,4 +101,13 @@
         </div>
     
 </body>
+<?php
+if(!isset($_SESSION['users'])){
+    ?>
+    <script>
+    document.getElementById('logout').style.display="none";
+    </script>
+    <?php
+}
+?>
 </html>

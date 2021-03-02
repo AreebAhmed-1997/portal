@@ -44,6 +44,8 @@ else{
 
 
 </head>
+<body>
+    
  
     <div class="main">
     <?php
