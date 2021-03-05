@@ -71,7 +71,7 @@ else{
     }
     
     </style>
-    <title>Document</title>
+    <title>SEND MAIL</title>
 </head>
 <body>
         <div class="main">

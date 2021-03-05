@@ -41,7 +41,7 @@ $res=mysqli_query($con,$inserting);
     <form action="" method="POST">
     
     <label for="">NAME</label>
-    <input  class="form-control" type="text" name="name "><br>
+    <input  class="form-control" type="text" name="name"><br>
     <label for="">CONTACT</label>
     <input  class="form-control" type="text" name="contact"><br>
     <label for="">EMAIL</label><br>

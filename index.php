@@ -19,7 +19,7 @@ include 'index2.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <title>HOME</title>
 
 </head>
 <body>
@@ -90,13 +90,14 @@ include 'index2.php';
               Charitable donations of goods or services are also called gifts in kind.</p>  <br><br>
               <div class="subtheme1">
              <a href="#themeses" class="theme3" style="font-family: 'Playfair Display', serif; font-weight:bold;">SEND FEEDBACK</a>
-             <a href="index.php" class="theme3" style="font-family: 'Playfair Display', serif; font-weight:bold;">VIEW ALERT</a>
+             <a href="home.php" class="theme3" style="font-family: 'Playfair Display', serif; font-weight:bold;">VIEW ALERT</a>
               
             </div>
             </div>           
             <img  class="theme2"src="pic/help.jpg" alt="this picture is not supported in your browser">
 
         </div>
+        
         
         <div class="introduction">
             <h1 style="text-align: center; font-family: 'Oswald', sans-serif; ">INTRODUCTION</h1>
@@ -122,6 +123,31 @@ include 'index2.php';
                 .<br> <br></p>
                    </div>
                    <br><br>
+
+                    <h1 class="display-3 text-secondary text-center">Have You Seen Them</h1>
+                   <div class="row">
+                   
+                    <?php
+                    $seldemo="select p_name, p_img from  personal_infor order by p_id DESC limit 3 ";
+                    $seldemque= mysqli_query($con,$seldemo);
+                    $seldemnum=mysqli_num_rows($seldemque);
+                    while($seldemres=mysqli_fetch_array($seldemque)){
+                        ?>
+                        
+                         
+                        <div class="col-lg-4 col-sm-6 col-12 w-100"><br> <br>
+                    <img src="<?php echo $seldemres['p_img'];?>" alt="">
+                    <p class="text-center">Name: <?php echo $seldemres['p_name']; ?></p>
+                    <button class="btn btn-primary w-100"><a class="text-white" href="home.php">See Full Info</a></button>
+                        </div><br>
+        
+                  
+                    <?php
+                    }
+                   
+                    ?>
+                    </div><br><br>
+                    <h2 class="display-3 text-center text-secondary">Services That We Are Providing</h2><br><br>
                    <div class="div3">
                        <div class="subdiv3">
                     <div class="subdiv3_1">
@@ -207,18 +233,19 @@ include 'index2.php';
            </div>
          </section> <br> <br> -->
          <br>
+         <?Php
+        $sel="select marque2 from marquee ";
+        $selque=mysqli_query($con,$sel);
+        $num=mysqli_num_rows($selque);
+        while($reult=mysqli_fetch_array($selque)){
+            ?>
          <div class ="marque2" >
              <h1 style=" font-family: 'Playfair Display', serif; text-align: center; color:#32CD32 ;"> UPCOMING EVENT</h1>
-            <marquee class="marquee2_1" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();">Saylani Welfare Distributing Ration & Clothes to affected people of Balochistan .More Detailsbr <br> <br>
-
-                Entry Test Accouncement (Graphic Designing & Video Editing/Animation Course) On Sunday 3rd March 2019 @ 11:00Am Vanue: 4rh Floor, Saylani Welfare International Trust HeadOffice Bahadurabad .More Details <br><br>
-                
-                Dr Jamil Ahmed (Additional Inspector General of Police) & Atiqmir Visit Saylani Welfare International Trust, Saylani Mass I.T. Training .More Details <br><br>
-                
-                PIAIC Entrance Exam Merit Ranking List Announced.More Details <br><br>
-                
-                President of Pakistan (Dr. Arif Alvi) Visited Saylani Welfare International Trust HeadOffice Karachi. More Details <br> <br> </marquee> <br><br> <br>
+            <marquee class="marquee2_1" direction="up" scrollamount="1" onmouseover="this.stop();" onmouseout="this.start();"> <?php  echo $reult['marque2'];?> <br> <br> </marquee> <br><br> <br>
         </div>
+        <?php
+    }
+    ?>
         
          <div style="background-color: #D0D0D0;" > 
          <h1 style="text-align:center; color: #000; font-family: 'Oswald', sans-serif;  ">  
