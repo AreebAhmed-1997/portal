@@ -1,7 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     width: 12px;
 }
 ::-webkit-scrollbar-thumb{
@@ -10,7 +10,7 @@ html {
 }
 ::-webkit-scrollbar-thumb:hover{
     background:linear-gradient(transparent,#D3D3D3 );
-}
+} */
 
 .div1{
     background-color :#D3D3D3;
@@ -188,7 +188,8 @@ marquee{
 }
 .theme{
     width: 100%;
-    height: 50vh;
+    height: auto;
+   
 }
 .theme0{
     text-align: center;
@@ -198,7 +199,7 @@ marquee{
     text-align: center;    
 }
 .theme2{
-    visibility: hidden;
+    display: none;
     width:0vw;
 }
 .subtheme1{
@@ -222,7 +223,7 @@ a.theme3{
 @media screen and (min-width:700px){
     .theme{
         width: 100%;
-       height: 80vh;
+       height: auto;
        display: flex;
     }
     h1.theme0{
@@ -239,8 +240,8 @@ a.theme3{
     .theme2{
         
         width: 50%;
-        height: 80vh;
-        visibility: visible;   
+        height: 100vh;
+        display: block;   
     }
     .subtheme1{
         width: 100%;
@@ -270,6 +271,7 @@ a.theme3{
 }
 .introduction{
     width: 100%;
+    
 }
  p{
      margin: 0px;
@@ -320,7 +322,7 @@ a.theme3{
 }
 .div5{
     width: 100%;
-    background-color:#D0D0D0;
+    background-color: transparent;
     text-align: center;
 }
 
@@ -336,13 +338,13 @@ a.theme3{
         
     }
     .subdiv5_{
-        background-color: #d0d0d0;
+        
         width: 50%;
   
     }
     .subdiv5_1{
         width: 50%;
-        background-color: #d0d0d0;
+       
     }
     .subdiv5_ , .subdiv5_1{
         float: left;
@@ -390,40 +392,76 @@ a.theme3{
         margin:10px;
     }
     .subdiv5_1_1:hover{
-        transform: scale(1.02);
-        transition:0.7s ease;
+        
+        transition:0.3s ease;
         box-shadow: 20px 20px 50px grey;
         font-size: 20px;
+        background: rgba( 255, 255, 255, 0.25 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                                backdrop-filter: blur( 4px );
+                            -webkit-backdrop-filter: blur( 4px );
+                                border-radius: 10px;
+                                    border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     .subdiv5_2_1:hover{
-        transform: scale(1.02);
-        transition:0.7s ease;
+       
+        transition:0.3s ease;
         box-shadow: 20px 20px 50px grey;
         font-size: 20px;
+        background: rgba( 255, 255, 255, 0.25 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                                backdrop-filter: blur( 4px );
+                            -webkit-backdrop-filter: blur( 4px );
+                                border-radius: 10px;
+                                    border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     .subdiv5_3_1:hover{
-        transform: scale(1.02);
-        transition:0.7s ease;
+        
+        transition:0.3s ease;
         box-shadow: 20px 20px 50px grey;
         font-size: 20px;
+        background: rgba( 255, 255, 255, 0.25 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                                backdrop-filter: blur( 4px );
+                            -webkit-backdrop-filter: blur( 4px );
+                                border-radius: 10px;
+                                    border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     .subdiv5_4_1:hover{
-        transform: scale(1.02);
-        transition:0.7s ease;
+       
+        transition:0.3s ease;
         box-shadow: 20px 20px 50px grey;
         font-size: 20px;
+        background: rgba( 255, 255, 255, 0.25 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                                backdrop-filter: blur( 4px );
+                            -webkit-backdrop-filter: blur( 4px );
+                                border-radius: 10px;
+                                    border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     .subdiv5_5_1:hover{
-        transform: scale(1.02);
-        transition:0.7s ease;
+        
+        transition:0.3s ease;
         box-shadow: 20px 20px 50px grey;
         font-size: 20px;
+        background: rgba( 255, 255, 255, 0.25 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                                backdrop-filter: blur( 4px );
+                            -webkit-backdrop-filter: blur( 4px );
+                                border-radius: 10px;
+                                    border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     .subdiv5_5_2:hover{
-        transform: scale(1.02);
-        transition:0.7s ease;
+        
+        transition:0.3s ease;
         box-shadow: 20px 20px 50px grey;
         font-size: 20px;
+        background: rgba( 255, 255, 255, 0.25 );
+                            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                                backdrop-filter: blur( 4px );
+                            -webkit-backdrop-filter: blur( 4px );
+                                border-radius: 10px;
+                                    border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 } 
 section {

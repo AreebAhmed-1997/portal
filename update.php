@@ -47,8 +47,8 @@
           </div> -->
 
         
-        <textarea row ="5" style="width:100% ;text-align:center;"  name="comment" form="usrform">
-            Enter info here..</textarea> <br>
+        <!-- <textarea row ="5" style="width:100% ;text-align:center;"  name="comment" form="usrform">
+            Enter info here..</textarea> <br> -->
             <button class="btn bg-success w-100 rounded-lg  text-white" type="submit" name="submit">UPDATE</button>
     </form>    
 </body>

@@ -23,12 +23,16 @@
    <body>
 
     <?php
+    include 'topheader.php';
 include 'headerfilter.php';
 include 'index2.php';
 $police="police";
 $selectquery= "select * from personal_infor where p_status like '{$police}%'";
 $query = mysqli_query($con,$selectquery);
 $nums = mysqli_num_rows($query);
+?>
+<div class="row w-100">
+<?php
 while($res = mysqli_fetch_array($query)){
     ?>
     <div  class="col-lg-4 col-sm-6 col-12 myclass" style="border-bottom :2px solid 	#C0C0C0 ">
@@ -41,18 +45,11 @@ while($res = mysqli_fetch_array($query)){
     <p class="form-control"  style=" border-bottom:2px solid #C0C0C0; ">Location: <?php echo $res['p_location']. "<br>";?></p>
     <p class="form-control"  style=" border-bottom:2px solid #C0C0C0; ">Contact: <?php echo $res['p_contact']. "<br>";?></p>
     <p class="form-control"  style=" border-bottom:2px solid #C0C0C0; ">Status: <?php echo $res['p_status']. "<br>";?></p>
-    </div>
-    
-    
-    
+    </div>   
 <?php
 }
-
 ?>
-
-
-
-       
-    </table>
+</div>
+<?php  include 'footer.php'; ?>
 </body>
 </html>

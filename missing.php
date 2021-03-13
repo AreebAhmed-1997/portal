@@ -23,14 +23,19 @@
    <body>
 
     <?php
+include 'topheader.php';
 include 'headerfilter.php';
 include 'index2.php';
 $missing="missing";
 $selectquery= "select * from personal_infor where p_status like '{$missing}%'";
 $query = mysqli_query($con,$selectquery);
 $nums = mysqli_num_rows($query);
+?>
+<div class="row w-100">
+<?php
 while($res = mysqli_fetch_array($query)){
     ?>
+    
     <div  class="col-lg-4 col-sm-6 col-12 myclass" style="border-bottom :2px solid 	#C0C0C0 ">
     <br>
     
@@ -49,10 +54,11 @@ while($res = mysqli_fetch_array($query)){
 }
 
 ?>
+</div>
 
-
-
-       
-    </table>
+  <?php
+  include ('footer.php')
+  ?>     
+    
 </body>
 </html>

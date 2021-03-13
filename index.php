@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'index2.php';
 ?>
 <!DOCTYPE html>
@@ -16,49 +17,23 @@ include 'index2.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>HOME</title>
-
+    <style>
+                .myclass:hover
+                {
+                transition:0.7s ease-in ;
+                }
+                img{
+                width:100%; height:50vh;
+                }
+</style>
 </head>
 <body>
-        <div class="div1"> 
-            <div class="subdiv1">
-                <a href="#" class="fa fa-facebook" style="color: #000; margin: 16px 0px;"></a>
-                <a href="#" class="fa fa-twitter" style=" color:#000; margin: 16px 0px;"></a>
-                <a href="#" class="fa fa-instagram" style="color:#000; margin-top: 16px 0px; "></a>
-                <a href="#" class="fa fa-youtube" style=" color: #000; margin-top: 10px 0px;"></a>
-                <a href="#" class="fa fa-whatsapp" style=" color:#000;margin-top: 10px 0px;"></a>
-            </div>
-           <div class="subdiv2">
-            <p style="text-align:center;">Millions of people's life has changed, millions more awaiting for your help</p>
-           </div><br>
-            <div class="btn">
-            <button class="btn1" >OVERSEAS DONOR</button>
-            <button class="btn2" >DONATE NOW</button>
-            
-            </div>
-        </div>
-        <br>
-        <!-- <div class="div2">
-            <div class="subdiv2_1">
-                <img class="img__1" src="picture/saylani.png" alt="">
-            </div>   
-            <div  class="subdiv2_2">
-                <i class="fas fa-bars bar" style="font-size: 30px; "></i>
-                <a href="#" class="nav" style="color: #fff; background: #00539cff; border-radius: 30px; font-size: 20px;">HOME</a>
-                <a href="#" class="nav">ABOUT</a>
-                <a href="#" class="nav">SERVICE</a>
-                <a href="#" class="nav">FUTURE-PROJECT </a>
-                <a href="#" class="nav">MEDIA</a>
-                <a href="#" class="nav">NEWS</a>
-                <a href="#" class="nav">DONATION</a>
-                <a href="#" class="nav">CONTACT US</a>
-            </div>
-        </div> -->
         <?php
-        
+        include 'topheader.php';
         include 'headerbasic.php';
         
         ?>
@@ -79,16 +54,16 @@ include 'index2.php';
         }
         
         ?>
-       
-        
-
 
         <div    class="theme">
             <div class="subtheme">
-            <h1 class="theme0" style="font-family: 'Playfair Display', serif;">TOGETHER WE CAN MAKE A BETTER TOMORROW</h1>
-            <p class="theme1" style="font-family: 'Playfair Display', serif;">A donation is a gift for charity, humanitarian aid, or to benefit a cause. A donation may take various forms, including money, alms, services, or goods such as clothing, toys, food, or vehicles. A donation may satisfy medical needs such as blood or organs for transplant.
-              Charitable donations of goods or services are also called gifts in kind.</p>  <br><br>
-              <div class="subtheme1">
+            <h1 class="theme0" style="font-family: 'Playfair Display', serif; color:#FFA500; ">Hope, Help And Support For Lost One's</h1>
+            <p class="theme1" style="font-family: 'Playfair Display', serif;"> HELPERPK site was established in 11 February 2021 by Areeb Ahmed. HELPERPK site was built on the
+                            fundamental to help those who are in need, help those who are misplaced, help those who had accident
+                            or arrested due to some reason. This project was developed to spread happiness and hope of life to
+                            other. <a style="color:#FFA500;" href="#intro">READ MORE</a></p>  <br><br>
+              <div class="subtheme1" style=>
+
              <a href="#themeses" class="theme3" style="font-family: 'Playfair Display', serif; font-weight:bold;">SEND FEEDBACK</a>
              <a href="home.php" class="theme3" style="font-family: 'Playfair Display', serif; font-weight:bold;">VIEW ALERT</a>
               
@@ -96,14 +71,28 @@ include 'index2.php';
             </div>           
             <img  class="theme2"src="pic/help.jpg" alt="this picture is not supported in your browser">
 
-        </div>
+        </div><br><br>
+
+
+        <!-- <div class="row w-100">
+
+        <div class="">
+            <h1>TOGETHER WE CAN MAKE A BETTER TOMORROW</h1>
+            <p style="font-family: 'Playfair Display', serif;">A donation is a gift for charity, humanitarian aid, or to benefit a cause. A donation may take various forms, including money, alms, services, or goods such as clothing, toys, food, or vehicles. A donation may satisfy medical needs such as blood or organs for transplant.
+              Charitable donations of goods or services are also called gifts in kind. </div>
+              <a href="#themeses"  style="font-family: 'Playfair Display', serif; font-weight:bold;">SEND FEEDBACK</a>
+             <a href="home.php"  style="font-family: 'Playfair Display', serif; font-weight:bold;">VIEW ALERT</a>
+        
+        <div>  <img class="w-75" src="pic/help.jpg" alt="this picture is not supported in your browser"></div>
+
+        </div> -->
         
         
         <div class="introduction">
-            <h1 style="text-align: center; font-family: 'Oswald', sans-serif; ">INTRODUCTION</h1>
+            <h1 style="text-align: center; font-family: 'Oswald', sans-serif; " id="intro">INTRODUCTION</h1>
             
                 <p class="introduction1" >
-                                            HELPERPK site was established in 11 February 2021 by Areeb Ahmed. HELPERPK site was built on the
+                                            HELPERPK site was established in 11 February 2021 by <a style="color:#FFA500;"  data-toggle="tooltip" data-placement="top" title="Areeb Ahmed khan" href="index46.html" class="link">Areeb Ahmed.</a>  HELPERPK site was built on the
                             fundamental to help those who are in need, help those who are misplaced, help those who had accident
                             or arrested due to some reason. This project was developed to spread happiness and hope of life to
                             other <br><br>
@@ -122,13 +111,29 @@ include 'index2.php';
 
                 .<br> <br></p>
                    </div>
-                   <br><br>
 
-                    <h1 class="display-3 text-secondary text-center">Have You Seen Them</h1>
-                   <div class="row">
+                   <div class="container">
+  <div class="rounded-lg jumbotron text-white " style="background-image:url('pic/help.jpeg');background-repeat: no-repeat;background-size: cover; background-position: center;">
+   <div style="background: rgba( 255, 255, 255, 0.15 );
+   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+   backdrop-filter: blur( 20px );
+   -webkit-backdrop-filter: blur( 20px );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );">
+    <h1 class="text-center">HELP US SPREDING HAPPINESS</h1>      
+    <p class="text-center">YOU CAN HELP US AND THOUSAND OF PEOPLE BY SENDING THEM BACK TO THEIR LOVE ONCE. IF YOU KNOW SOMEONE WHO IS MISPLACED OR FOUNDED.BY CLICKING BELOW BUTTON WILL CREATE AN ALERT OR INFORMATION CARD THAT WILL HELP OTHER TO FIND THEIR LOVED ONCE </p><br>
+   <a class="text-white btn btn-success float-right " style="text-decoration: none;" href="index1.php">  CREATE ALERT</a><br><br>
+</div>
+</div>
+      
+</div>
+                   
+
+<h1 class="display-3 text-secondary text-center">Have You Seen Them</h1>
+                   <div class="row w-100">
                    
                     <?php
-                    $seldemo="select p_name, p_img from  personal_infor order by p_id DESC limit 3 ";
+                    $seldemo="select p_id, p_name, p_img from  personal_infor order by p_id DESC limit 3 ";
                     $seldemque= mysqli_query($con,$seldemo);
                     $seldemnum=mysqli_num_rows($seldemque);
                     while($seldemres=mysqli_fetch_array($seldemque)){
@@ -138,7 +143,7 @@ include 'index2.php';
                         <div class="col-lg-4 col-sm-6 col-12 w-100"><br> <br>
                     <img src="<?php echo $seldemres['p_img'];?>" alt="">
                     <p class="text-center">Name: <?php echo $seldemres['p_name']; ?></p>
-                    <button class="btn btn-primary w-100"><a class="text-white" href="home.php">See Full Info</a></button>
+                    <a href="vieweach.php?updid=<?php echo $seldemres['p_id'];?>"><button class="btn btn-success" >VIEW INFO</button></a>
                         </div><br>
         
                   
@@ -170,37 +175,37 @@ include 'index2.php';
                 </div>
                 </div>
             </div><br><br>
-                <div class="div5"><br>
-                    <h1 style="font-family: 'Oswald', sans-serif; color: #32CD32;">WHAT WE ARE DOING ?</h1> 
-                    <div class="subdiv5_"> 
-                    <div class="subdiv5_1_1"><br>
-                    <i class='fas fa-hand-holding-usd' style='font-size:48px;color:#000080'></i><br><br>
-                    <p style="color:#00539cff ;font-family: 'Oswald', sans-serif;">ONLINE SADQAH</p><br>
+                <div class="div5" style="background-image:url('pic/ba.jpg'); background-repeat:no-repeat; background-size:cover;"><br>
+                        <h1 style="font-family: 'Oswald', sans-serif; color: #32CD32;">WHAT WE ARE DOING ?</h1> 
+                        <div class="subdiv5_"> 
+                        <div class="subdiv5_1_1" ><br>
+                        <i class='fas fa-hand-holding-usd' style='font-size:48px;color:#000080'></i><br><br>
+                        <p style="color:#00539cff ;font-family: 'Oswald', sans-serif;">ONLINE SADQAH</p><br>
+                        </div><br>
+                        <div class="subdiv5_2_1"><br>
+                        <i class='fas fa-users' style='font-size:48px;color:#006400'></i><br><br>
+                        <p style="color:#00539cff ;font-family: 'Oswald', sans-serif;">WELFARE</p><br>
+                    </div><br> 
+                    <div class="subdiv5_3_1" ><br>
+                        <i class='fas fa-stethoscope' style='font-size:48px;color:#4169E1'></i><br><br>
+                        <p style="color:#00539cff ;font-family: 'Oswald', sans-serif;">MEDICAL</p><br>
                     </div><br>
-                    <div class="subdiv5_2_1"><br>
-                    <i class='fas fa-users' style='font-size:48px;color:#006400'></i><br><br>
-                    <p style="color:#00539cff ;font-family: 'Oswald', sans-serif;">WELFARE</p><br>
-                </div><br> 
-                <div class="subdiv5_3_1" ><br>
-                    <i class='fas fa-stethoscope' style='font-size:48px;color:#4169E1'></i><br><br>
-                    <p style="color:#00539cff ;font-family: 'Oswald', sans-serif;">MEDICAL</p><br>
-                </div><br>
-            </div>
-            <div class="subdiv5_1">
-                <div class="subdiv5_4_1"><br>
-                    <i class="fa fa-fw fa-cutlery" style="font-size:48px;color:#6495ED"></i><br><br>
-                    <P style="color:#00539cff ;font-family: 'Oswald', sans-serif;">DASTARKHWAN</P><br>
-                </div><br>
-                    <div class="subdiv5_5_1"><br>
-                        <i class='fas fa-book-reader' style='font-size:48px;color:#FFD662FF;'></i><br><br>
-                        <P style="color:#00539cff ;font-family: 'Oswald', sans-serif;">EDUCATION</P><br>
+                </div>
+                <div class="subdiv5_1">
+                    <div class="subdiv5_4_1"><br>
+                        <i class="fa fa-fw fa-cutlery" style="font-size:48px;color:#6495ED"></i><br><br>
+                        <P style="color:#00539cff ;font-family: 'Oswald', sans-serif;">DASTARKHWAN</P><br>
                     </div><br>
-                <div class="subdiv5_5_2"><br>
-                    <i class='fas fa-egg' style='font-size:48px;color:#48D1CC;'></i><br><br>
-                    <P style="color:#00539cff ;font-family: 'Oswald', sans-serif;">RO PLANT</P><br>
-                </div><br>
-            </div>
-                <br>    
+                        <div class="subdiv5_5_1"><br>
+                            <i class='fas fa-book-reader' style='font-size:48px;color:#FFD662FF;'></i><br><br>
+                            <P style="color:#00539cff ;font-family: 'Oswald', sans-serif;">EDUCATION</P><br>
+                        </div><br>
+                    <div class="subdiv5_5_2"><br>
+                        <i class='fas fa-egg' style='font-size:48px;color:#48D1CC;'></i><br><br>
+                        <P style="color:#00539cff ;font-family: 'Oswald', sans-serif;">RO PLANT</P><br>
+                    </div><br>
+                </div>
+                    <br>    
             </div> 
           
                 <!-- <h1 style="font-family: 'Oswald', sans-serif; color:#4169E1">MISSION AND UPCOMING PROJECT</h1>
@@ -300,57 +305,18 @@ $res=mysqli_query($con,$inserting);
     <label for="">FEEDBACK</label><br>
     <textarea name="text" class="form-control" cols="100" rows="3"></textarea><br>
     <input  class="btn  btn-success w-25" type="submit" name="submit" value="SEND"><br> <br>
+  </form>
     </div>
-         <div class="divtable1">
-         <table class="TABLE">
-             <tr class="TABLE-HEAD">
-            <th></th>
-            <th></th>
-            <th></th>    
-            </tr>
-            <tr class="TABLE-DATA">
-                <td style=" text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;">Head Office,</td>
-                <td style="  font-family: 'Playfair Display', serif; color:#FFF;">USEFUL LINK</td>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#FFF;">CONTACT WITH US</td>
-            </tr>
-            <tr >
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-map-marker" style="font-size:20px"> R-807, 16-A, Bufferzone Karachi, Pakistan</i></td>
-                <td></td>
-                <td style="text-align: center; font-family: 'Playfair Display', serif;  color:#C0C0C0;"><i class="fa fa-facebook-f" style="font-size:20px;"> Facebook</i></td>
-            </tr>
-            <tr>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"></td>
-                <td></td>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-twitter" style="font-size:20px"> Twitter</i></td>
-            </tr>
-            <tr>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-mobile-phone" style="font-size:20px"> CELL:03072079337</i></td>
-                <td></td>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-instagram" style="font-size:20px"> Instagram</i></td>
-            </tr>
-            <tr>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"></td>
-                <td style="text-align: center;"></td>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-youtube-play" style="font-size:20px"> Youtube</i></td>
-            </tr>
-            <tr>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"></td>
-                <td></td>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-whatsapp" style="font-size:20px"> Whatsapp</i></td>
-            </tr>
-            <tr>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-envelope" style="font-size:20px"> areeb1997ahmed@gmail.com </i></td>
-                <td style="text-align: center;"></td>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-envelope" style="font-size:20px"> Gmail</i></td>
-            </tr>
-         </table>
-         <div class="footerbotom">
-             <p>Copyright 2021 HELPERPK.COM</p>
-         </div>
-        </div>
+    <?php
+    include 'footer.php';
+    ?>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
   </script>
 </body>
 </html>

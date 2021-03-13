@@ -1,14 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['users'])){
-
 header('location:login.php');
-
 }
 
-
-include 'headerbasic.php';
 include 'index2.php';
+include 'topheader.php';
 
 if(isset($_POST['submit'])){
     $fname= $_POST['fname'];
@@ -17,6 +14,7 @@ if(isset($_POST['submit'])){
     $location= $_POST['location']; 
     $contact=$_POST['Contact'];
     $status=$_POST['status'];
+    $info=$_POST['info'];
     //iMAGE INSERT
     $imge =$_FILES['image'];
     $filename = $imge['name'];
@@ -33,7 +31,7 @@ if(isset($_POST['submit'])){
             $des ='images/'.$filename;
             move_uploaded_file($filepath,$des);
     }
-    $inserting = "insert into personal_infor(founded_name,p_name,p_email,p_location,p_contact, p_status,p_img) values ('$fname','$name','$email','$location','$contact','$status','$des')";
+    $inserting = "insert into personal_infor(founded_name,p_name,p_email,p_location,p_contact, p_status,p_img,info) values ('$fname','$name','$email','$location','$contact','$status','$des','$info')";
     $res=mysqli_query($con,$inserting);
     if ($res){
         ?>
@@ -73,12 +71,12 @@ if(isset($_POST['submit'])){
     <form action="" class="mx-2 p-0" method="POST" enctype=multipart/form-data>
 
         
-        <input type="text"  name="fname" class="form-control mb-1" placeholder="PERSON NAME">
+        <input type="text"  name="fname" class="form-control mb-1" placeholder="Your Name ">
         
         <!-- <input type="email" class="form-control mb-1" placeholder="ENTER STATUS"> --> 
         <!-- <input type="date" class="form-control mb-1" id="birthday" name="birthday"> -->
         
-        <input type="text" name="name" class="form-control mb-1" placeholder="YOUR NAME">
+        <input type="text" name="name" class="form-control mb-1" placeholder="Person name">
         <input type="text" name="email" class="form-control mb-1" placeholder="Enter EMAIL ">
         <input type="text" name="location" class="form-control mb-1" placeholder="Enter LOCATION ">
         <input type="text" name="Contact" class="form-control mb-1" placeholder="Enter CONTACT ">
@@ -95,17 +93,14 @@ if(isset($_POST['submit'])){
            
             
           </div> -->
-
-        
-        <textarea row ="5" style="width:100% ;text-align:center;"  name="comment" form="usrform">
-            Enter info here..</textarea> <br>
-
-             
+          <input type="text" name="info" class="form-control mb-1" placeholder="Enter status ">  
             <input type="file" name="image" class="btn mb-1 ">
             <button class="btn bg-success w-100 rounded-lg  text-white" type="submit" name="submit"> ADD ALERT</button>
 
-    </form>
-    
+    </form><br>
+    <?php
+    include 'footer.php';
+    ?>
     
 </body>
 </html>

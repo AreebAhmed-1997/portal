@@ -68,14 +68,14 @@ function closeNav() {
 <div id="mySidenav" class="sidenav">
 
  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
- <a href="index.php"> MAIN PAGE</a>
- <a href="userdetail.php"> USERS DETAIL</a>
-  <a href="index3.php">INFO RECORD</a>
-  <a href="e_mail1.php"> PERSONAL EMAIL</a>
-  <a href="emailall.php"> EMAIL TO ALL</a>
-  
-  <a href="feedbacktable.php">VIEW FEEDBACK </a>
-   <a href="logoutadminpanel.php">LOGOUT</a>
+ <a href="index.php">Main page</a>
+ <a href="userdetail.php"> User detail</a>
+  <a href="index3.php">Info record</a>
+  <a href="e_mail1.php"> Personal email</a>
+  <a href="emailall.php"> Email to all</a>
+  <a href="marqueeedit.php"> Marquee edit</a>
+  <a href="feedbacktable.php">View feedback</a>
+   <a href="logoutadminpanel.php">Logout</a>
 </div>
 
 <div style="display:flex; width:100%;  background-color:#transparent; border-bottom:2px solid #C0C0C0;color:#fff; ">

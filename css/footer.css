@@ -1,0 +1,22 @@
+.TABLE{
+    /* border: 2px solid #000; */
+    width: 100%;
+}
+.divtable1{
+    width: 100%;
+    background-color: #696969;
+}
+.footerbotom {
+    width: 100%;
+    color: #f8f8ff;
+    background-color:#00539cff;
+    font-size: 20px;
+    height: 5vh;
+}
+.footerbotom{
+    margin-top: 30px;
+}
+.image_gallery{
+    width: 100%;
+    background-color:  #D0D0D0;
+}

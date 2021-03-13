@@ -1,8 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,11 +10,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+<style>
+.logoimg{
+        width:100%;
+        height:10vh;
+    }
+    .navi{
+     font-size:3vh;
+     color:#fff;
+    }
+    .navi:hover{
+        
+        border-radius:30px;
+     transition:0.3s ease-in;
+     background-color :#D3D3D3;
+    }
+    .navi1{
+        
+        
+    }
+</style>
     </head>
             <body>
 
-                <script>
+
+                <!-- <script>
                 function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             }
@@ -100,7 +118,44 @@
         <h1 style="width:95% ; text-align:center; font-size:4vw; margin:0px">HELPERPK.COM</h1>
         </div>
     
-</body>
+</body> -->
+<nav class="navbar navbar-expand-md navbar-light "  >
+  <a href="index.php" class="w-25"> <img class="logoimg " src="pic\logo.png" alt="logo" ></a>
+  <button  class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
+    <span class="navbar-toggler-icon text-body"></span>
+  </button>
+ 
+   
+  
+  <div class="collapse navbar-collapse " style="justify-content:flex-end;" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item navi1 mr-1 ml-1">
+        <a class="nav-link navi" style="color:#000;" href="index.php">Home</a>
+      </li>
+      <li class="nav-item  navi1 mr-1 ml-1">
+        <a class="nav-link navi" style="color:#000;"   href="home.php">Alert page</a>
+      </li>
+      
+      <li class="nav-item  navi1 mr-1 ml-1">
+        <a class="nav-link navi" style="color:#000;"   href="index1.php">Report missing</a>
+      </li>
+      <li class="nav-item  navi1 mr-1 ml-1">
+        <a class="nav-link navi" style="color:#000;"  href="signin.php">Signin</a>
+
+      </li>
+      <li class="nav-item  navi1 mr-1 ml-1">
+        <a class="nav-link navi" style="color:#000;"   href="login.php">Login</a>
+      </li> 
+      <li class="nav-item  navi1  mr-1 ml-1">
+        <a class="nav-link navi" style="color:#000;"  id="logout" style="color:#000;"  href="filterlogout.php">Logout</a>
+      </li>   
+         
+    </ul>
+
+  </div>  
+</nav>
+        </body>
+        </html>
 <?php
 if(!isset($_SESSION['users'])){
     ?>
