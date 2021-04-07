@@ -24,11 +24,13 @@
 <body>
 <div class="div1"> 
             <div class="subdiv1">
-                <a href="#" class="fa fa-facebook" style="color: #000;font-size:2.5vh; margin: 16px 0px;"></a>
-                <a href="#" class="fa fa-twitter" style="color:#000;font-size:2.5vh; margin: 16px 0px;"></a>
-                <a href="#" class="fa fa-instagram" style="color:#000;font-size:2.5vh; margin-top: 16px 0px; "></a>
-                <a href="#" class="fa fa-youtube" style=" color: #000;font-size:2.5vh; margin-top: 10px 0px;"></a>
-                <a href="#" class="fa fa-whatsapp" style=" color:#000;font-size:2.5vh; margin-top: 10px 0px;"></a>
+                <a href="https://www.facebook.com/helper.pk.90/"  data-toggle="tooltip" data-placement="top" title="facebook"  target="_blank" class="fa fa-facebook"   style="color: #000;font-size:2.5vh; margin: 16px 0px;"></a>
+                <a href="https://www.twitter.com/helperpk1"  data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" class="fa fa-twitter" style="color:#000;font-size:2.5vh; margin: 16px 0px;"></a>
+                <a href="https://www.instagram.com/helperpakistan/"  data-toggle="tooltip" data-placement="top" title="Instagram" target="_blank" class="fa fa-instagram" style="color:#000;font-size:2.5vh; margin-top: 16px 0px; "></a>
+                <a href="https://www.helperpk001@gmail.com"  data-toggle="tooltip" data-placement="top" title="Gmail"  target="_blank" class="fa fa-google" style=" color: #000;font-size:2.5vh; margin-top: 10px 0px;"></a>
+                <a href="http://blogsdetox.unaux.com/"  data-toggle="tooltip" data-placement="bottom" title="Blog" target="_blank"  style=" color: #000;font-size:2.5vh; margin-top: 10px 0px;"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
+                <a href="http://ridecycles.unaux.com/" data-toggle="tooltip" data-placement="bottom" title="E-commerce"  target="_blank"  style=" color: #000;font-size:2.5vh; margin-top: 10px 0px;"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
+                
             </div>
            <div class="subdiv2">
             <p style="text-align:center; font-size:2vh;">Millions of people's life has changed, millions more awaiting for your help</p>

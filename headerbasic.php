@@ -120,7 +120,7 @@
     
 </body> -->
 <nav class="navbar navbar-expand-md navbar-light "  >
-  <a href="index.php" class="w-25"> <img class="logoimg " src="pic\logo.png" alt="logo" ></a>
+  <a href="index.php" class="w-25"> <img class="logoimg " src="img\logo.png" alt="logo" ></a>
   <button  class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
     <span class="navbar-toggler-icon text-body"></span>
   </button>
@@ -130,24 +130,24 @@
   <div class="collapse navbar-collapse " style="justify-content:flex-end;" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item navi1 mr-1 ml-1">
-        <a class="nav-link navi" style="color:#000;" href="index.php">Home</a>
+        <a class="nav-link navi " style="color:#000;" href="index.php">Home</a>
       </li>
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi" style="color:#000;"   href="home.php">Alert page</a>
+        <a class="nav-link navi " style="color:#000;"   href="home.php">Missing information</a>
       </li>
       
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi" style="color:#000;"   href="index1.php">Report missing</a>
+        <a class="nav-link navi " style="color:#000;"   href="index1.php">Report missing</a>
       </li>
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi" style="color:#000;"  href="signin.php">Signin</a>
+        <a class="nav-link navi " style="color:#000;"  href="signin.php">Signin</a>
 
       </li>
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi" style="color:#000;"   href="login.php">Login</a>
+        <a class="nav-link navi " style="color:#000;"   href="login.php">Login</a>
       </li> 
       <li class="nav-item  navi1  mr-1 ml-1">
-        <a class="nav-link navi" style="color:#000;"  id="logout" style="color:#000;"  href="filterlogout.php">Logout</a>
+        <a class="nav-link navi " style="color:#000;"  id="logout" style="color:#000;"  href="filterlogout.php">Logout</a>
       </li>   
          
     </ul>

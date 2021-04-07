@@ -30,6 +30,7 @@ function showfilter() {
         <a class="text-body pl-2 pr-2" style="text-decoration: underline,    ;font-size:3vh;" href="missing.php">Search for missing person</a>
         <a class="text-body pl-2 pr-2" style="text-decoration: underline,    ;font-size:3vh;"  href="police.php">Search  in police station</a>
         <a class="text-body pl-2 pr-2" style="text-decoration: underline,   ;font-size:3vh;"  href="accident.php">Search in hospital </a>
+        <a class="text-body pl-2 pr-2" style="text-decoration: underline,   ;font-size:3vh;"  href="founded.php">Founded People </a>
         <a class="text-body pl-2 pr-2" style="text-decoration: underline,    ;font-size:3vh;"  href="other.php">Others</a>
             </div>
     </div>

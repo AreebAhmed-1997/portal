@@ -1,14 +1,19 @@
+<?php
+session_start();
+?>    
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info-Helperpk</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <title>Alert Info</title>
-    <style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  
     .myclass:hover
     {
       transform:scale(1.01);
@@ -19,74 +24,55 @@
     width:100%; height:50vh;
     }
     </style>
-   </head>
-   <body>
-
-    <?php
-    include 'topheader.php';
-include 'headerfilter.php';
+</head>
+<body>
+<?php
+include 'topheader.php';
+include 'headerbasic.php';
+include 'index2.php ';
 include 'fil.php';
 ?>
-<br>
-<?php
-include 'index2.php';
+
+<form class="form-inline w-100" action="" method="POST">
+<input style="width:75vw;" class=" ml-1 form-control" type="text" name="search">
+<input  class="rounded btn btn-success ml-1" style="width:20vw;"type="submit" name="submit">
+</form><br>
 
 
 
-$limit=6;
-if(isset($_GET['pagination'])){
-$page=$_GET['pagination'];
-}
-else{
-  $page=1;
-}
-$offset=($page-1)*$limit;
 
-$selectquery= "select * from personal_infor order by p_id DESC  limit {$offset},{$limit}";
+<?php 
+if(isset($_POST['submit'])){
+   $search=$_POST['search'];
+$selectquery= "select * from personal_infor where p_name like '{$search}%'  ";
 $query = mysqli_query($con,$selectquery);
 $nums = mysqli_num_rows($query);
-$showselecting="select * from personal_infor order by p_id desc";
-
-$selecting="select * from personal_infor";
-  $selectingque=mysqli_query($con, $selecting);
-
-  if(mysqli_num_rows($selectingque) > 0){
-    $totrecords=mysqli_num_rows($selectingque);
-    
-    $totpage=ceil($totrecords/$limit);
-  
-  }?>
-  <div class="row w-100">
-  <?php
+?>
+<div class="row w-100">
+<?php
 while($res = mysqli_fetch_array($query)){
     ?>
-    <div  class="col-lg-4 col-md-6 col-sm-12 myclass "  style="border-bottom :2px solid 	#C0C0C0 ">
-    <br>
-    
-    <img src="<?php echo $res['p_img'];?>" alt="this image has problem" style="" ><br><br>
-    <p class="" style=" border-bottom:2px solid #C0C0C0; font-size:2vh; text-transform:capitalize;" >  Added By: <?php echo $res['founded_name']. "<br>";?> </p>
-    <p class=""  style=" border-bottom:2px solid #C0C0C0; font-size:2vh;  text-transform:capitalize;  ">Name: <?php echo $res['p_name']. "<br>";?></p>
-    <p class=""  style=" border-bottom:2px solid #C0C0C0; font-size:2vh;  ">Email: <?php echo $res['p_email']. "<br>";?></p>
-    <p class=""  style=" border-bottom:2px solid #C0C0C0; font-size:2vh; text-transform:capitalize;  ">Location: <?php echo $res['p_location']. "<br>";?></p>
-    <p class=""  style=" border-bottom:2px solid #C0C0C0; font-size:2vh;  ">Contact: <?php echo $res['p_contact']. "<br>";?></p>
-    <p class=""  style="  text-transform:capitalize;  font-size:2vh; ">Status: <?php echo $res['p_status']. "<br>";?></p>
-    <a style="font-size:2.5vh;" class="btn btn-success w-100" href="vieweach.php?updid=<?php echo $res['p_id'];?>">  VIEW INFO</a>
+    <div  class="col-lg-4 col-md-6 col-sm-12 myclass">
+    <img src=" <?php echo $res['p_img'];?> " alt="something wrong" width=100 height=50>
+    <p style="border-bottom:3px solid #D3D3D3 ;font-size:20px;font-family: 'Dosis', sans-serif ;text-align:center ;text-transform:capitalize;">Name: &nbsp;<?php echo $res['p_name']. "<br>";?></p>
+    <p style="font-size:16px;font-family: 'Overpass', sans-serif;">Added by: &nbsp;<?php echo $res['founded_name']. "<br>";?> </p>
+    <p style="font-size:16px;font-family: 'Overpass', sans-serif;">Email: &nbsp;<?php echo $res['p_email']. "<br>";?></p>
+    <p style="font-size:16px;font-family: 'Overpass', sans-serif;">Location: &nbsp;<?php echo $res['p_location']. "<br>";?></p>
+    <p style="font-size:16px;font-family: 'Overpass', sans-serif;">Contact: &nbsp;<?php echo $res['p_contact']. "<br>";?></p>
+    <p style="font-size:16px;font-family: 'Overpass', sans-serif;">Status: &nbsp; <?php echo $res['p_status']. "<br>";?></p>
+    <a style="font-size:2.5vh;" class="btn btn-success w-100" href="vieweach.php?updid=<?php echo $res['p_id'];?>">  VIEW INFO</a> <br><br>
     </div>
-
+   
 <?php
 }
-
-?>  
-</div> <br>
-<?php
-echo'<ul class="pagination  justify-content-center">';
-for($i=1; $i<=$totpage; $i++){
- echo'<li class="page-item"><a style="font-size:2vh;  " href="home.php?pagination='.$i.'">'.$i.'</a></li>';
-}
-echo'</ul>';
-include 'footer.php';
 ?>
-
+</div>
+<?php
+}
+else{
+  include 'searching.php';
+}
+?>  
+</div>
 </body>
 </html>
-

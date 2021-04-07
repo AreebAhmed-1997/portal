@@ -29,39 +29,39 @@
             <th></th>    
             </tr>
             <tr class="TABLE-DATA ">
-                <td style=" text-align: center; font-family: 'Playfair Display', serif; color:#FFF;">Head Office,</td>
+                <td style=" text-align: center; font-family: 'Playfair Display', serif; color:#FFF;">ADDRESS,</td>
                 
                 <td style="text-align: center; font-family: 'Playfair Display', serif; color:#FFF;">CONTACT WITH US</td>
             </tr>
             <tr >
                 <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-map-marker" style="font-size:20px"> R-807, 16-A, Bufferzone Karachi, Pakistan</i></td>
                 
-                <td style="text-align: center; font-family: 'Playfair Display', serif;  color:#C0C0C0;"><i class="fa fa-facebook-f" style="font-size:20px;"> Facebook</i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif;  color:#C0C0C0;"><i class="fa fa-facebook-f" style="font-size:20px;"> <a href="https://www.facebook.com/helper.pk.90/"  target="_blank"  style="color: #000;font-size:3vh; color:#C0C0C0; margin: 16px 0px;">Facebook</a> </i></td>
             </tr>
             <tr>
                 <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"></td>
                 
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-twitter" style="font-size:20px"> Twitter</i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"> <a href="https://www.twitter.com/helperpk1"  target="_blank"  style="font-size:3vh; color:#C0C0C0; margin: 16px 0px;"><i class="fa fa-twitter" style="font-size:20px"> Twitter</i></a></td>
             </tr>
             <tr>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-mobile-phone" style="font-size:20px"> CELL:03072079337</i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"> <i class="fa fa-mobile-phone" style="font-size:20px"> CELL:03072079337</i></td>
                 
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-instagram" style="font-size:20px"> Instagram</i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"> <a href="https://www.instagram.com/helperpakistan/"  target="_blank"  style="font-size:3vh; color:#C0C0C0; margin: 16px 0px;"><i class="fa fa-instagram" style="font-size:20px"> Instagram</i></a></td>
             </tr>
             <tr>
                 <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"></td>
                 
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-youtube-play" style="font-size:20px"> Youtube</i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"> <a href="#"  target="_blank"  style="font-size:3vh; color:#C0C0C0; margin: 16px 0px;"><i class="fa fa-youtube-play" style="font-size:20px"> Youtube</i></a></td>
             </tr>
             <tr>
                 <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"></td>
                 
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-whatsapp" style="font-size:20px"> Whatsapp</i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-whatsapp" style="font-size:20px">+92 307 2079337</i></td>
             </tr>
             <tr>
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-envelope" style="font-size:20px"> areeb1997ahmed@gmail.com </i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"> <i class="fa fa-envelope" style="font-size:20px"> helperpk001@gmail.com </i></td>
                
-                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"><i class="fa fa-envelope" style="font-size:20px"> Gmail</i></td>
+                <td style="text-align: center; font-family: 'Playfair Display', serif; color:#C0C0C0;"> <a href="https://www.helperpk001@gmail.com"  target="_blank"  style="font-size:3vh; color:#C0C0C0; margin: 16px 0px;"><i class="fa fa-envelope" style="font-size:20px"> Gmail</i></a></td>
             </tr>
          </table>
          <div class="footerbotom">

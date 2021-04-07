@@ -239,7 +239,7 @@ a.theme3{
     }
     .theme2{
         
-        width: 50%;
+        width: 45%;
         height: 100vh;
         display: block;   
     }
@@ -258,7 +258,7 @@ a.theme3{
         background-color:#D3D3D3;
     }
     .subtheme{
-        width: 50%;
+        width: 55%;
     }
     .theme3:hover{
         color:#000;
