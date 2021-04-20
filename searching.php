@@ -49,8 +49,29 @@
 <?php
 while($res = mysqli_fetch_array($query)){
     ?>
+    
     <div  class="col-lg-4 col-md-6 col-sm-12 myclass"  style="">
-    <img src=" <?php echo $res['p_img'];?> " alt="something wrong" width=100 height=50><br>
+    <?php
+     $checking=$res['img_status'];
+     if($checking=='checked'){
+       ?>
+       <div style="position:relative; text-align:center">
+    <img src=" <?php echo $res['p_img'];?> " alt="something wrong" width=100 height=50  style="filter:blur(10px);"><br>
+      <div style="position:absolute;top:50%;left:50%; transform:translate(-50%, 50%);">
+      <button  class="btn btn-danger w-100">
+      View At Your Own Risk
+      </button>
+      </div>
+
+      </div>
+    <?php
+     }
+     else{
+       ?>
+      <img src=" <?php echo $res['p_img'];?> " alt="something wrong" width=100 height=50"><br>
+      <?php
+     }
+    ?>
     <p style="border-bottom:3px solid #D3D3D3; font-size:20px;font-family: 'Dosis', sans-serif ;text-align:center ;text-transform:capitalize;">Name: <?php echo $res['p_name']. "<br>";?></p>
     <p style="font-size:16px;font-family: 'Dosis', sans-serif ;">Added by: <?php echo $res['founded_name']. "<br>";?> </p>
     
@@ -58,7 +79,22 @@ while($res = mysqli_fetch_array($query)){
     <p style="font-size:16px;font-family: 'Dosis', sans-serif ;">Location: <?php echo $res['p_location']. "<br>";?></p>
     <p style="font-size:16px;font-family: 'Dosis', sans-serif ;">Contact: <?php echo $res['p_contact']. "<br>";?></p>
     <p style="font-size:16px;font-family: 'Dosis', sans-serif ;">Status: <?php echo $res['p_status']. "<br>";?></p>
-    <a style="font-size:2.5vh;" class="btn btn-success w-100" href="vieweach.php?updid=<?php echo $res['p_id'];?>">VIEW INFO</a> <br><br>
+    <a style="font-size:2.5vh;" class="btn btn-secondary w-25" href="vieweach.php?updid=<?php echo $res['p_id'];?>">INFO</a> 
+    <?php
+    $em=$res['p_email'];
+
+    if(empty($_SESSION['users'])){
+     
+    }
+    elseif($_SESSION['users']==$em){
+      ?>
+      <a href="usereditfoam.php?upded1=<?php echo $res['p_id'];?>"><button class="btn btn-primary w-25">EDIT</button></a>
+      <a href="userfoundform.php?updfouform=<?php echo $res['p_id'];?>"><button class="btn btn-success w-25">FOUNDED</button></a><br><br> 
+      
+      
+      <?php
+    }
+    ?>
     </div>
     <?php
 }

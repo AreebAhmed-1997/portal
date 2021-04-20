@@ -57,26 +57,10 @@
 </html>
  -->
  <?php
-include 'index2.php';
  session_start();
-
- if(isset($_POST['submit'])){
- $name=$_POST['name'];
- $pass=$_POST['pass'];
-
- $selecting="select * from signi where name = '$name' and pass='$pass' ";//check if the database field are correct
- $que=mysqli_query($con, $selecting);
- $num=mysqli_num_rows($que);
- if($num == 1){
-     header('location:index1.php');
-        $_SESSION['users'] = $name;
-    }
-  
-    else{
-        header('location:login.php');
-    }
-   }
-   ?>
+include 'index2.php';
+ 
+ ?>
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -179,20 +163,49 @@ include 'index2.php';
             <div class="login-form">
                <form method="POST">
                   <div class="form-group">
-                     <label>User Name</label>
-                     <input type="text" class="form-control" name="name" placeholder="User Name">
+                     <label>User Email</label>
+                     <input type="text" class="form-control" name="name" placeholder="User Name" required>
                   </div>
                   <div class="form-group">
                      <label>Password</label>
-                     <input type="password" class="form-control" name="pass" placeholder="Password">
+                     <input type="password" class="form-control" name="pass" placeholder="Password" required>
                   </div>
                   <button type="submit" name="submit" class="btn btn-black">Login</button>
                   <button type="submit" class="btn btn-secondary"><a  style="color:#fff;"  href="signin.php">Register</a></button>
-                  <button  class="btn btn-secondary"><a  style="color:#fff;"  href="index.php">Home</a></button>
+                  <button  class="btn btn-secondary"><a  style="color:#fff;"  href="index.php">Home</a></button><br><br>
                </form>
+               <?php
+ if(isset($_POST['submit'])){
+ $name=$_POST['name'];
+ $pass=$_POST['pass'];
+
+ $selecting="select * from signi where email = '$name' and pass='$pass' ";//check if the database field are correct
+ $que=mysqli_query($con, $selecting);
+ $num=mysqli_num_rows($que);
+ if($num == 1){
+     ?>
+        <script>
+        window.location='index1.php';
+        </script>
+     <?php
+        $_SESSION['users'] = $name;
+      
+    }
+  
+    else{
+        // header('location:login.php');
+        ?>
+        <div class="alert alert-danger w-100 text-center p-0 m-0"   >
+    <p class="m-0 pt-4 p-0"><strong>Alert!</strong> Incorrect Useremail or Password.</p><br><br>
+  </div>
+        <?php
+    }
+   }
+   ?>
             </div>
          </div>
       </div>
+      
      
  </body>
  </html>

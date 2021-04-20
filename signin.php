@@ -49,13 +49,17 @@ if(isset($_POST['submitT'])){
     $inserting = "insert into signi(name,lastname ,email , phone,pass) values('$name' ,'$lname' ,'$email' ,'$phone' ,'$pass')";
     $res=mysqli_query($con,$inserting);
     if ($res){
+        header( "refresh:5;url=login.php" )
         ?>
         <script>alert("data inserted")</script>
         <?php
     }
     else{
         ?>
-       <script> alert("data not inserted")</script>
+       <!-- <script> alert("data not inserted")</script> -->
+                    <div class="alert alert-danger w-100 text-center p-0 m-0"   >
+                    <p class="m-0 pt-4 p-0"><strong>Alert!</strong> Incorrect Useremail or Password.</p><br><br>
+                </div>
        <?php
     }
 

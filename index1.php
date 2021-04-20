@@ -10,10 +10,11 @@ include 'topheader.php';
 if(isset($_POST['submit'])){
     $fname= $_POST['fname'];
     $name= $_POST['name'];
-    $email= $_POST['email'];
+    $email= $_SESSION['users'];
     $location= $_POST['location']; 
     $contact=$_POST['Contact'];
     $status=$_POST['status'];
+    $img_status=$_POST['img_status'];
     $info=$_POST['info'];
     //iMAGE INSERT
     $imge =$_FILES['image'];
@@ -31,13 +32,15 @@ if(isset($_POST['submit'])){
             $des ='images/'.$filename;
             move_uploaded_file($filepath,$des);
     }
-    $inserting = "insert into personal_infor(founded_name,p_name,p_email,p_location,p_contact, p_status,p_img,info) values ('$fname','$name','$email','$location','$contact','$status','$des','$info')";
+    $inserting = "insert into personal_infor(founded_name,p_name,p_email,p_location,p_contact, p_status,p_img,img_status,info) values ('$fname','$name','$email','$location','$contact','$status','$des','$img_status','$info')";
     $res=mysqli_query($con,$inserting);
     if ($res){
         ?>
-        <script>alert("data inserted")</script>
+        <script>alert("data inserted")
+        window.location='home.php';
+        </script>
         <?php
-        header('location:home.php');
+        
     }
     else{
         ?>
@@ -67,7 +70,11 @@ if(isset($_POST['submit'])){
     </STYle>
 </head>
 <body>
+<?php
+    include 'headerbasic.php';
+    ?>
     <H2 style="text-align: center;">ALERT PAGE</H2>
+  
     <form action="" class="mx-2 p-0" method="POST" enctype=multipart/form-data>
 
         
@@ -77,10 +84,11 @@ if(isset($_POST['submit'])){
         <!-- <input type="date" class="form-control mb-1" id="birthday" name="birthday"> -->
         
         <input type="text" name="name" class="form-control mb-1" placeholder="Person name">
-        <input type="text" name="email" class="form-control mb-1" placeholder="Enter EMAIL ">
         <input type="text" name="location" class="form-control mb-1" placeholder="Enter LOCATION ">
         <input type="text" name="Contact" class="form-control mb-1" placeholder="Enter CONTACT ">
         <input type="text" name="status" class="form-control mb-1" placeholder="Enter status ">
+        <p class="m-0 ml-1"> if you find your picture creating violance press this -> <input type="checkbox" name="img_status" value="checked" >
+        </p>
         
         <!-- <div class="form-group p-0">
                 
@@ -93,7 +101,7 @@ if(isset($_POST['submit'])){
            
             
           </div> -->
-          <input type="text" name="info" class="form-control mb-1" placeholder="Enter status ">  
+          <input type="text" name="info" class="form-control mb-1" placeholder="Enter  detail information about the person  ">  
             <input type="file" name="image" class="btn mb-1 ">
             <button class="btn bg-success w-100 rounded-lg  text-white" type="submit" name="submit"> ADD ALERT</button>
 

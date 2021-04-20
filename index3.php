@@ -66,9 +66,9 @@ else{
         <th>CONTACT</th>
         <TH>STATUS</TH>
         <th>IMAGE</th>
-        <th>FOUNDED</th>
         <th>UPDATE</th>
         <th>DELETE</th>
+        <th>FOUNDED</th>
         </tr>
 
 
@@ -91,8 +91,9 @@ while($res = mysqli_fetch_array($query)){
     <td><?php echo $res['p_contact']. "<br>";?></td>
     <td><?php echo $res['p_status']. "<br>";?></td>
     <td><img src=" <?php echo $res['p_img'];?> " alt="something wrong" width=100 height=50></td>
-    <td><a  data-toggle="tooltip" data-placement="left" title="UPDATE!" class="btn btn-success" style="text-decoration:none;"  href="update.php?updid=<?php echo $res['p_id'];?>">UPDATE</a></td>
+    <td><a  data-toggle="tooltip" data-placement="left" title="UPDATE!" class="btn btn-primary" style="text-decoration:none;"  href="update.php?updid=<?php echo $res['p_id'];?>">UPDATE</a></td>
     <td><a onclick="myfunc()" data-toggle="tooltip" data-placement="top" title="DELETE!" class="btn btn-danger"  style="text-decoration:none;" href="delete.php?delid=<?php echo $res['p_id'];?>">DELETE</a></td>
+    <td><a data-toggle="tooltip" data-placement="top" title="FOUNDED!" class="btn btn-success"  style="text-decoration:none;" href="foundededit.php?upraid=<?php echo $res['p_id'];?>">FOUNDED</a></td>
     </tr>
 <?php
 }

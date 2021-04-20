@@ -13,7 +13,7 @@ function showfilter() {
 </head>
 <body>
     
-    <button onclick="showfilter()" class="btn btn-success  mb-2 ml-2 " style="text-align: center; font-size:3vh; width :10%;">FILTERS</button>
+    <button onclick="showfilter()" class="btn btn-success  mb-2 ml-2 w-25 " style="text-align: center; font-size:2.5vh;">FILTERS</button>
 
     <div class="container float-none" id="demo" style="display: none;background-image:url(spar4-.jpg); background-repeat: no-repeat; background-size: cover;">
         <div class="jumbotron" style="background: rgba( 255, 255, 255, 0.05 );

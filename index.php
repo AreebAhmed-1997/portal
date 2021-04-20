@@ -1,13 +1,6 @@
 	<?php
 	session_start();
 	include 'index2.php';
-	if(!isset($_SESSION['users'])){
-		?>
-		<script>
-		document.getElementById('logout').style.display="none";
-		</script>
-		<?php
-	}
 	?>
 	
 	
@@ -47,7 +40,7 @@
 
     }
     .navi{
-     font-size:15px;
+     font-size:16px;
      color:#fff;
     }
 	a.navbar-link.navi{
@@ -109,12 +102,15 @@
       <li class="nav-item  navi1 mr-1 ml-1">
         <a class="nav-link navi "style="color:#fff;"   href="index1.php">Report missing</a>
       </li>
+	  <li class="nav-item  navi1 mr-1 ml-1">
+        <a id="mypost" class="nav-link navi "style="color:#fff;"   href="mypost.php">Mypost</a>
+      </li>
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi "style="color:#fff;"  href="signin.php">Signin</a>
+        <a class="nav-link navi "style="color:#fff;" id="signup" href="signin.php">Signin</a>
 
       </li>
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi "style="color:#fff;"    href="login.php">Login</a>
+        <a class="nav-link navi "style="color:#fff;" id="login"   href="login.php">Login</a>
       </li> 
       <li class="nav-item  navi1  mr-1 ml-1">
         <a class="nav-link navi "style="color:#fff;"   id="logout" style="color:#000;"  href="filterlogout.php">Logout</a>
@@ -129,9 +125,18 @@
 if(!isset($_SESSION['users'])){
     ?>
     <script>
+	 document.getElementById('mypost').style.display="none";
     document.getElementById('logout').style.display="none";
     </script>
     <?php
+
+}
+else{
+	?>
+	<script>document.getElementById('login').style.display="none";
+	document.getElementById('signup').style.display="none";
+		</script>
+	<?php
 }
 ?>
 
@@ -228,8 +233,8 @@ if(!isset($_SESSION['users'])){
 								 </div>
 							</div>
 							<div class="details">
-								<a href="#"><h2>Easy Search</h2></a>
-						  		<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+								<a href="#"><h2>Quick Search</h2></a>
+						  		<p>Quick searching help in finding people missing person more efficently search your case information it's time saving.</p>
 						  		
 							</div>
 
@@ -248,7 +253,7 @@ if(!isset($_SESSION['users'])){
 							</div>
 							<div class="details">
 								<a href="#"><h2>Filter Result</h2></a>
-						  		<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+						  		<p>Filter are the best feature for finding out the specific result. Use filter to filter out the result.</p>
 						  		
 							</div>
 						</div>
@@ -257,7 +262,7 @@ if(!isset($_SESSION['users'])){
 								<div class="content">
 								    <a href="#" target="_blank">
 								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/loading_data.gif" alt="">
+								  		 <img class="content-image img-fluid d-block mx-auto" src="img/data.gif" alt="">
 								      	<div class="content-details fadeIn-bottom">
 								      		<!-- <a href="#" class="head-btn btn text-uppercase">Record Management</a> -->
 								      	</div>
@@ -266,7 +271,7 @@ if(!isset($_SESSION['users'])){
 							</div>
 							<div class="details">
 								<a href="#"><h2>Easy Record Management</h2></a>
-						  		<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.</p>
+						  		<p>Keeping the record clean is the identity of professional website .We try our best to not to complicate it. </p>
 						  		
 							</div>
 						</div>

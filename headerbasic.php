@@ -140,12 +140,16 @@
         <a class="nav-link navi " style="color:#000;"   href="index1.php">Report missing</a>
       </li>
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi " style="color:#000;"  href="signin.php">Signin</a>
+        <a class="nav-link navi " id="mypost" style="color:#000; "   href="mypost.php">Mypost</a>
+      </li> 
+      <li class="nav-item  navi1 mr-1 ml-1">
+        <a class="nav-link navi " style="color:#000;" id="signup"  href="signin.php">Signup</a>
 
       </li>
       <li class="nav-item  navi1 mr-1 ml-1">
-        <a class="nav-link navi " style="color:#000;"   href="login.php">Login</a>
+        <a class="nav-link navi " style="color:#000;" id="login"  href="login.php">Login</a>
       </li> 
+
       <li class="nav-item  navi1  mr-1 ml-1">
         <a class="nav-link navi " style="color:#000;"  id="logout" style="color:#000;"  href="filterlogout.php">Logout</a>
       </li>   
@@ -161,8 +165,17 @@ if(!isset($_SESSION['users'])){
     ?>
     <script>
     document.getElementById('logout').style.display="none";
+    document.getElementById('mypost').style.display="none";
     </script>
     <?php
+}
+else{
+	?>
+	<script>
+  document.getElementById('login').style.display="none";
+  document.getElementById('signup').style.display="none";
+  	</script>
+	<?php
 }
 ?>
 </html>
